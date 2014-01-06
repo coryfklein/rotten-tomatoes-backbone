@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/rottenapp.css"/>
+
+<title>Upcoming Rotten Tomatoes</title>
+</head>
+<body>
+
+<div id="rottenapp">
+  <header>
+    <h1>Upcoming Rotten Tomatoes</h1>
+  </header>
+
+  <section id="main">
+    <ul id="movie-list"></ul>
+  </section>
+
+  <footer>
+    <p>Created by Cory Klein</p>
+  </footer>
+
+</div>
+
+<script src="js/jquery-2.0.3.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/backbone.js"></script>
+<script src="js/rotten.js"></script>
+
+<!-- Templates -->
+
+<script type="text/template" id="item-template">
+<div class="view content">
+  <img src="<%- poster %>" class="movie-poster" />
+  <h3 class="movie-title"><%- title %></h3>
+  <%- synopsis %>
+</div>
+<br style="clear:both">
+</script>
+
+<script type="text/template" id="count-template">
+    <div class="count-number"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+</script>
+
+</body>
+</html>

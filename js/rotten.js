@@ -21,16 +21,6 @@ var Movie = Backbone.Model.extend({
 
 });
 
-var ResultCount = Backbone.Model.extend({
-
-    defaults: function() {
-        return {
-            count: "0",
-        };
-    }
-
-});
-
 $(function(){
 
     var MovieList = Backbone.Collection.extend({
@@ -104,10 +94,6 @@ $(function(){
 
 function upcomingMoviesCallback(data) {
     $(document.body).append('Found ' + data.total + ' upcoming films.');
-    var resultCount = new ResultCount({
-        count: data.total
-    });
-    console.log(resultCount.get("count"));
     var movies = data.movies;
     $.each(movies, function(index, movie) {
         var backboneMovie = new Movie({

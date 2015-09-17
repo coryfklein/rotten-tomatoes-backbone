@@ -1,4 +1,4 @@
-Example [here](http://coryklein.com/rotten-tomatoes-backbone/).
+Example [here](http://data.coryklein.com/rotten-tomatoes-backbone/).
 
 rotten-tomatoes-backbone
 ========================
